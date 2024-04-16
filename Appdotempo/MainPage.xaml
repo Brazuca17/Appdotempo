@@ -3,39 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Appdotempo.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid ColumnSpacing="10">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+    <Grid.RowDefinitions>
+        <RowDefinition Height="200"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="80"/>
+    </Grid.RowDefinitions>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <Image  Source="fotoclima.png"
+                Aspect="AspectFill"
+                Grid.ColumnSpan="3"
+                Grid.RowSpan="3"/>
+                
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <Frame  Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="White"
+                BorderColor="Black"
+                Padding="6"
+                CornerRadius="30"
+                Opacity=".6">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>       
+        
+            <Label  Text="23"
+                    HorizontalTextAlignment="Center"
+                    FontSize="29"
+                    TextColor="Black"
+                    Grid.Row="0"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <Label  Text="Tempo Nublado"
+                    HorizontalTextAlignment="Center"
+                    FontSize="12"
+                    TextColor="black"
+                    Grid.Row="1"/>
 
-        </VerticalStackLayout>
-    </ScrollView>
+            <Label  Text="Apucarana, PR"
+                    HorizontalTextAlignment="Center"
+                    FontSize="15"
+                    TextColor="Black"
+                    Grid.Row="2"/>
+        </Grid>  
+        </Frame>     
 
+            <Frame  Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="White"
+                BorderColor="Black"
+                HeightRequest="120"
+                Padding="6"
+                CornerRadius="30"
+                Opacity=".6">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>       
+        
+
+            <Label  Text="Chuva :"
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    Grid.Row="0"
+                    TextColor="Black"/>
+            
+            <Label  Text="Humidade :"
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    Grid.Row="1"
+                    TextColor="Black"/>
+        </Grid>  
+        </Frame>            
+          
+                    
+
+
+
+    </Grid>
 </ContentPage>
