@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Appdotempo.MainPage">
 
-    <Grid ColumnSpacing="10">
+    <Grid   ColumnSpacing="10"
+            RowSpacing="10">
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
@@ -85,7 +86,47 @@
                     Grid.Row="1"
                     TextColor="Black"/>
         </Grid>  
-        </Frame>            
+        </Frame> 
+
+
+        <Frame  Grid.Row="0"
+                Grid.Column="2"
+                BackgroundColor="White"
+                BorderColor="Black"
+                HeightRequest="120"
+                Padding="6"
+                CornerRadius="30"
+                Opacity=".6">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>       
+        
+
+            <Label  Text="Vento"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="0"
+                    TextColor="Black"/>
+            
+            <Label  Text="Força :"
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="1"
+                    TextColor="Black"/>
+
+            <Label  Text="Direção :"
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="2"
+                    TextColor="Black"/>
+        </Grid>  
+        </Frame>               
           
                     
 
