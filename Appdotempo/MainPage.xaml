@@ -12,9 +12,10 @@
     </Grid.ColumnDefinitions>
 
     <Grid.RowDefinitions>
-        <RowDefinition Height="200"/>
         <RowDefinition Height="*"/>
-        <RowDefinition Height="80"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
         <Image  Source="fotoclima.png"
@@ -22,8 +23,9 @@
                 Grid.ColumnSpan="3"
                 Grid.RowSpan="3"/>
                 
-
-        <Frame  Grid.Row="0"
+        <!--Frame da temperatura-->
+        <Frame  Grid.Row="1"
+                Grid.RowSpan="2"
                 Grid.Column="0"
                 BackgroundColor="White"
                 BorderColor="Black"
@@ -55,9 +57,10 @@
                     TextColor="Black"
                     Grid.Row="2"/>
         </Grid>  
-        </Frame>     
-
-            <Frame  Grid.Row="0"
+        </Frame>
+             
+        <!--Frame da chuva-->
+            <Frame  Grid.Row="1"
                 Grid.Column="1"
                 BackgroundColor="White"
                 BorderColor="Black"
@@ -88,8 +91,8 @@
         </Grid>  
         </Frame> 
 
-
-        <Frame  Grid.Row="0"
+        <!--Frame do Vento-->
+        <Frame  Grid.Row="1"
                 Grid.Column="2"
                 BackgroundColor="White"
                 BorderColor="Black"
@@ -126,11 +129,95 @@
                     Grid.Row="2"
                     TextColor="Black"/>
         </Grid>  
-        </Frame>               
+        </Frame>
+
+        <!--Frame do Sol-->
+        <Frame  Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="White"
+                BorderColor="Black"
+                HeightRequest="120"
+                Padding="6"
+                CornerRadius="30"
+                Opacity=".6">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>       
+        
+
+            <Label  Text="Sol"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="0"
+                    TextColor="Black"/>
+            
+            <Label  Text="Amanhecer: "
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="1"
+                    TextColor="Black"/>
+
+            <Label  Text="anoitecer: "
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="2"
+                    TextColor="Black"/>
+        </Grid>  
+        </Frame> 
+
+         <!--Frame da Lua-->
+        <Frame  Grid.Row="2"
+                Grid.Column="2"
+                BackgroundColor="White"
+                BorderColor="Black"
+                HeightRequest="120"
+                Padding="6"
+                CornerRadius="30"
+                Opacity=".6">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>       
+        
+
+            <Label  Text="Lua"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="0"
+                    TextColor="Black"/>
+            
+            <Label  Text="Fase: "
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Start"
+                    Grid.Row="1"
+                    TextColor="Black"/>
+
+        
+        </Grid>  
+        </Frame>    
+
+         <!--Ultima Frame-->
+        <Frame  Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="White"
+                BorderColor="Black"
+                HeightRequest="120"
+                Padding="6"
+                CornerRadius="30"
+                Opacity=".6">
+        </Frame>                   
           
                     
-
-
 
     </Grid>
 </ContentPage>
