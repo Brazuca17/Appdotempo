@@ -18,20 +18,20 @@
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
-        <Image  Source="fotoclima.png"
+        <Image  Source="diaensolarado.png"
                 Aspect="AspectFill"
                 Grid.ColumnSpan="3"
-                Grid.RowSpan="3"/>
+                Grid.RowSpan="4"/>
                 
         <!--Frame da temperatura-->
         <Frame  Grid.Row="1"
                 Grid.RowSpan="2"
                 Grid.Column="0"
-                BackgroundColor="White"
+                HeightRequest="250"
+                BackgroundColor="#55ffffff"
                 BorderColor="Black"
                 Padding="6"
-                CornerRadius="30"
-                Opacity=".6">
+                CornerRadius="30">
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -39,7 +39,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>       
         
-            <Label  Text="23"
+            <Label  Text="23°C"
                     HorizontalTextAlignment="Center"
                     FontSize="29"
                     TextColor="Black"
@@ -47,7 +47,7 @@
 
             <Label  Text="Tempo Nublado"
                     HorizontalTextAlignment="Center"
-                    FontSize="12"
+                    FontSize="15"
                     TextColor="black"
                     Grid.Row="1"/>
 
@@ -62,146 +62,226 @@
         <!--Frame da chuva-->
             <Frame  Grid.Row="1"
                 Grid.Column="1"
-                BackgroundColor="White"
+                VerticalOptions="End"
+                BackgroundColor="#55ffffff"
                 BorderColor="Black"
                 HeightRequest="120"
                 Padding="6"
-                CornerRadius="30"
-                Opacity=".6">
+                CornerRadius="30">
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>       
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>       
         
 
-            <Label  Text="Chuva :"
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Center"
-                    Grid.Row="0"
-                    TextColor="Black"/>
-            
-            <Label  Text="Humidade :"
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Center"
-                    Grid.Row="1"
-                    TextColor="Black"/>
+                <Label  Text="Chuva :"
+                        FontSize="13"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        TextColor="Black"/>
+
+                <Label  Text="x"
+                        FontSize="13"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        TextColor="Black"/>               
+
+                <Label  Text="HumiLdade :"
+                        FontSize="13"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Center"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="Black"/>
+
+                <Label  Text="x"
+                        FontSize="13"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="Black"/> 
         </Grid>  
         </Frame> 
 
         <!--Frame do Vento-->
         <Frame  Grid.Row="1"
+                VerticalOptions="End"
                 Grid.Column="2"
-                BackgroundColor="White"
+                BackgroundColor="#55ffffff"
                 BorderColor="Black"
                 HeightRequest="120"
                 Padding="6"
-                CornerRadius="30"
-                Opacity=".6">
+                CornerRadius="30">
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>       
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>         
         
 
-            <Label  Text="Vento"
-                    FontSize="20"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="0"
-                    TextColor="Black"/>
+                <Label  Text="Vento"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        TextColor="Black"/>
             
-            <Label  Text="Força :"
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="1"
-                    TextColor="Black"/>
+                <Label  Text="Força :"
+                        FontSize="13"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="Black"/>
 
-            <Label  Text="Direção :"
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="2"
-                    TextColor="Black"/>
+                <Label  Text="x"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Start"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="Black"/>     
+
+                <Label  Text="Direção:"
+                        FontSize="13"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        TextColor="Black"/>
+
+                <Label  Text="x"
+                        FontSize="13"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Start"
+                         Grid.Row="2"
+                        Grid.Column="1"
+                        TextColor="Black"/>         
         </Grid>  
         </Frame>
 
         <!--Frame do Sol-->
         <Frame  Grid.Row="2"
                 Grid.Column="1"
-                BackgroundColor="White"
+                VerticalOptions="Start"
+                BackgroundColor="#55ffffff"
                 BorderColor="Black"
                 HeightRequest="120"
                 Padding="6"
-                CornerRadius="30"
-                Opacity=".6">
+                CornerRadius="30">
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>       
+        </Grid.RowDefinitions> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>             
         
 
-            <Label  Text="Sol"
-                    FontSize="20"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="0"
-                    TextColor="Black"/>
+                <Label  Text="Sol"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        TextColor="Black"/>
             
-            <Label  Text="Amanhecer: "
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="1"
-                    TextColor="Black"/>
+                <Label  Text="Nascer:"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="Black"/>
 
-            <Label  Text="anoitecer: "
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="2"
-                    TextColor="Black"/>
+                <Label  Text="x"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Start"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="Black"/>  
+
+                <Label  Text="Pôr: "
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        TextColor="Black"/>
+
+                <Label  Text="x"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Start"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        TextColor="Black"/> 
         </Grid>  
         </Frame> 
 
          <!--Frame da Lua-->
         <Frame  Grid.Row="2"
                 Grid.Column="2"
-                BackgroundColor="White"
+                VerticalOptions="Start"
+                BackgroundColor="#55ffffff"
                 BorderColor="Black"
                 HeightRequest="120"
                 Padding="6"
-                CornerRadius="30"
-                Opacity=".6">
+                CornerRadius="30">
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>       
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>         
         
 
-            <Label  Text="Lua"
-                    FontSize="20"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="0"
-                    TextColor="Black"/>
+                <Label  Text="Lua"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        TextColor="Black"/>
             
-            <Label  Text="Fase: "
-                    FontSize="15"
-                    HorizontalTextAlignment="Start"
-                    VerticalTextAlignment="Start"
-                    Grid.Row="1"
-                    TextColor="Black"/>
+                <Label  Text="Fase: "
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="Black"/>
 
-        
+                <Label  Text="x"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Start"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="Black"/> 
         </Grid>  
         </Frame>    
 
@@ -209,15 +289,13 @@
         <Frame  Grid.Row="3"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
-                BackgroundColor="White"
+                BackgroundColor="#55ffffff"
                 BorderColor="Black"
                 HeightRequest="120"
                 Padding="6"
-                CornerRadius="30"
-                Opacity=".6">
+                CornerRadius="30">
         </Frame>                   
           
-                    
 
     </Grid>
 </ContentPage>
