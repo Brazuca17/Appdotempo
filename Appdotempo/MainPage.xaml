@@ -39,19 +39,19 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>       
         
-            <Label  Text="23°C"
+            <Label  x:Name="labeltemp"
                     HorizontalTextAlignment="Center"
                     FontSize="29"
                     TextColor="Black"
                     Grid.Row="0"/>
 
-            <Label  Text="Tempo Nublado"
+            <Label  x:Name="labelclima"
                     HorizontalTextAlignment="Center"
                     FontSize="15"
                     TextColor="black"
                     Grid.Row="1"/>
 
-            <Label  Text="Apucarana, PR"
+            <Label  x:Name="labelcidade"
                     HorizontalTextAlignment="Center"
                     FontSize="15"
                     TextColor="Black"
@@ -74,12 +74,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="70"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>       
         
 
-                <Label  Text="Chuva :"
+                <Label  Text="Chuva:"
                         FontSize="13"
                         HorizontalTextAlignment="Start"
                         VerticalTextAlignment="Center"
@@ -87,7 +87,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldachuva"
                         FontSize="13"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Center"
@@ -95,7 +95,7 @@
                         Grid.Column="1"
                         TextColor="Black"/>               
 
-                <Label  Text="HumiLdade :"
+                <Label  Text="Umidade :"
                         FontSize="13"
                         HorizontalTextAlignment="Start"
                         VerticalTextAlignment="Center"
@@ -103,7 +103,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldaumidade"
                         FontSize="13"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Center"
@@ -129,7 +129,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="70"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>         
         
@@ -150,7 +150,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldaforcadovento"
                         FontSize="15"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Start"
@@ -166,7 +166,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldadirecaodovento"
                         FontSize="13"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Start"
@@ -213,7 +213,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldonascerdosol"
                         FontSize="15"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Start"
@@ -229,7 +229,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldopordosol"
                         FontSize="15"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Start"
@@ -275,7 +275,7 @@
                         Grid.Column="0"
                         TextColor="Black"/>
 
-                <Label  Text="x"
+                <Label  x:Name="labeldafasedalua"
                         FontSize="15"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Start"
