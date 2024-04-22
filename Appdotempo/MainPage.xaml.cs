@@ -31,9 +31,10 @@ public partial class MainPage : ContentPage
 		}
 		catch (Exception e)	
 		{
-			//ERRO
+			System.Diagnostics.Debug.WriteLine(e);
 		}
 	}
+
 
 	
 
@@ -53,6 +54,31 @@ public partial class MainPage : ContentPage
 			labeldafasedalua.Text = "Cheia";
 		else if(resposta.results.moon_phase=="new")
 			labeldafasedalua.Text = "Nova";
+		else if(resposta.results.moon_phase=="growing")
+			labeldafasedalua.Text = "Crescente";
+		else if(resposta.results.moon_phase=="waning")
+			labeldafasedalua.Text = "minguante";
+
+
+		if(resposta.results.currently=="dia")
+		{
+			if(resposta.results.rain>=10)
+			imgFundo.Source="diachuvoso.png";
+			else if(resposta.results.cloudiness>=10)
+			imgFundo.Source="dianublado.png";
+			else
+			imgFundo.Source="diaensolarado";
+		}
+		else
+		{
+			if(resposta.results.rain>=10)
+			 imgFundo.Source="noitechuvosa.png";
+			 else if (resposta.results.cloudiness>=10)
+			 imgFundo.Source="noitenublada.png";
+			 else
+			 imgFundo.Source="noite.png";
+		}
+		
 	
 	}
 

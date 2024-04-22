@@ -18,7 +18,7 @@
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
-        <Image  Source="diaensolarado.png"
+        <Image  x:Name="imgFundo"
                 Aspect="AspectFill"
                 Grid.ColumnSpan="3"
                 Grid.RowSpan="4"/>

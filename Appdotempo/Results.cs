@@ -14,5 +14,6 @@ public class Results
     public string moon_phase{get; set;}
     public string img_id{get; set;}
     public string condition_code{get; set;}
-
+    public string currently{get; set;}
+    public double cloudiness{get; set;}
 }
