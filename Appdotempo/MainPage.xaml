@@ -283,19 +283,95 @@
                         Grid.Column="1"
                         TextColor="Black"/> 
         </Grid>  
-        </Frame>    
+        <Frame  CornerRadius="30"
+                Margin="10,0,10,40"     
+                BorderColor="Transparent"
+                BackgroundColor="#99FFFFFF"
+                HeightRequest="200"
+                VerticalOptions="End">
 
-         <!--Ultima Frame-->
-        <Frame  Grid.Row="3"
-                Grid.Column="0"
-                Grid.ColumnSpan="3"
-                BackgroundColor="#55ffffff"
-                BorderColor="Black"
-                HeightRequest="120"
-                Padding="6"
-                CornerRadius="30">
-        </Frame>                   
-          
+        <CollectionView x:Name="listaForecast">
+        <CollectionView.ItemsLayout>
+          <LinearItemsLayout    Orientation="Horizontal"
+                                ItemSpacing="10" />
+         </CollectionView.ItemsLayout>
 
-    </Grid>
+        <CollectionView.ItemTemplate>
+        <DataTemplate>
+         <Frame BackgroundColor="#FFF"
+                BorderColor="#FFF"
+                WidthRequest="200"      
+                CornerRadius="20">
+
+        <Grid>
+        <Grid.RowDefinitions>
+         <RowDefinition Height="15"/>
+         <RowDefinition Height="20" />
+         <RowDefinition Height="15" />
+         <RowDefinition Height="15" />
+         <RowDefinition Height=""/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="*"/>
+         <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+                <Label  Text="{Binding date}"
+                        FontSize="12"
+                        TextColor="#000"
+                        HorizontalOptions="Center"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"/>
+
+                <Label  Text="{Binding weekday}"
+                        FontSize="16"
+                        TextColor="#000"
+                        HorizontalOptions="Center"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"/>
+
+                <Label  Text="Min:"
+                        FontSize="12"
+                        TextColor="#000"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="0"/>
+
+                <Label  Text="Max:"
+                        FontSize="12"
+                        TextColor="#000"
+                        HorizontalOptions="Center"
+                        Grid.Row="3"
+                        Grid.Column="0"/>
+
+                <Label Text="{Binding min, StringFormat='{0}º C'}"
+                        FontSize="14"
+                        TextColor="#000"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+
+                <Label  Text="{Binding max, StringFormat='{0}º C'}"
+                        FontSize="14"
+                        TextColor="#000"
+                        Horizontal0ptions="Center"
+                        Grid.Row="3"
+                        Grid.Column="1"/>
+
+                <Image  Source="{Binding condition}"
+                        Aspect="Fill"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="4"/>
+
+</Grid>
+
+</Frame>
+
+</DataTemplate>
+
+</CollectionView.ItemTemplate>
+</Grid>
 </ContentPage>

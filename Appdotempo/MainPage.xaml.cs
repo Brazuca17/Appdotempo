@@ -40,7 +40,7 @@ public partial class MainPage : ContentPage
 
 	void PreencherTela()
 	{
-		
+		listaForecast.ItemsSource=resposta.results.forecast;
 		labeltemp.Text = resposta.results.temp.ToString();
 		labelclima.Text = resposta.results.description;
 		labelcidade.Text = resposta.results.city;
