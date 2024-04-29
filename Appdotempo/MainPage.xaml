@@ -283,13 +283,15 @@
                         Grid.Column="1"
                         TextColor="Black"/> 
         </Grid>  
+        </Frame>
         <Frame  CornerRadius="30"
                 Margin="10,0,10,40"     
                 BorderColor="Transparent"
                 BackgroundColor="#99FFFFFF"
                 HeightRequest="200"
-                VerticalOptions="End">
-
+                VerticalOptions="End"
+                Grid.Row="3"
+                Grid.ColumnSpan="3">
         <CollectionView x:Name="listaForecast">
         <CollectionView.ItemsLayout>
           <LinearItemsLayout    Orientation="Horizontal"
@@ -309,7 +311,7 @@
          <RowDefinition Height="20" />
          <RowDefinition Height="15" />
          <RowDefinition Height="15" />
-         <RowDefinition Height=""/>
+         <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -355,7 +357,7 @@
                 <Label  Text="{Binding max, StringFormat='{0}º C'}"
                         FontSize="14"
                         TextColor="#000"
-                        Horizontal0ptions="Center"
+                        HorizontalOptions="Center"
                         Grid.Row="3"
                         Grid.Column="1"/>
 
@@ -366,12 +368,11 @@
                         Grid.ColumnSpan="2"
                         Grid.Row="4"/>
 
-</Grid>
-
-</Frame>
-
-</DataTemplate>
-
-</CollectionView.ItemTemplate>
+                </Grid>
+             </Frame>
+           </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+      </Frame>
 </Grid>
 </ContentPage>

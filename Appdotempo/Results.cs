@@ -16,5 +16,5 @@ public class Results
     public string condition_code{get; set;}
     public string currently{get; set;}
     public double cloudiness{get; set;} 
-    public List<Forecast> listaForecast{get; set;}
+    public  List<Forecast> forecast{get; set;}
 }
