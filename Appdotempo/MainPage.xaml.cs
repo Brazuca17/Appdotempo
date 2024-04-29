@@ -50,13 +50,14 @@ public partial class MainPage : ContentPage
 		labeldadirecaodovento.Text = resposta.results.wind_direction.ToString();
 		labeldonascerdosol.Text = resposta.results.sunrise;
 		labeldopordosol.Text = resposta.results.sunset;
+		labeldafasedalua.Text = resposta.results.moon_phase;
 		if(resposta.results.moon_phase=="full")
 			labeldafasedalua.Text = "Cheia";
 		else if(resposta.results.moon_phase=="new")
 			labeldafasedalua.Text = "Nova";
 		else if(resposta.results.moon_phase=="growing")
 			labeldafasedalua.Text = "Crescente";
-		else if(resposta.results.moon_phase=="waning")
+		else if(resposta.results.moon_phase=="waning_gibbous")
 			labeldafasedalua.Text = "minguante";
 
 
@@ -67,7 +68,7 @@ public partial class MainPage : ContentPage
 			else if(resposta.results.cloudiness>=10)
 			imgFundo.Source="dianublado.png";
 			else
-			imgFundo.Source="diaensolarado";
+			imgFundo.Source="diaensolarado.png";
 		}
 		else
 		{
