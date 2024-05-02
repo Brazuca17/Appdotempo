@@ -12,7 +12,6 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		
 		AtualizaTempo();
 	}
 
@@ -58,8 +57,9 @@ public partial class MainPage : ContentPage
 		else if(resposta.results.moon_phase=="growing")
 			labeldafasedalua.Text = "Crescente";
 		else if(resposta.results.moon_phase=="waning_gibbous")
-			labeldafasedalua.Text = "minguante";
-
+			labeldafasedalua.Text = "Minguante";
+		else if(resposta.results.moon_phase=="last_quarter")
+			labeldafasedalua.Text = "Minguante";
 
 		if(resposta.results.currently=="dia")
 		{

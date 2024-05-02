@@ -12,7 +12,7 @@
     </Grid.ColumnDefinitions>
 
     <Grid.RowDefinitions>
-        <RowDefinition Height="*"/>
+        <RowDefinition Height="50"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
@@ -48,12 +48,14 @@
             <Label  x:Name="labelclima"
                     HorizontalTextAlignment="Center"
                     FontSize="15"
+                    VerticalOptions="Center"
                     TextColor="black"
                     Grid.Row="1"/>
 
             <Label  x:Name="labelcidade"
                     HorizontalTextAlignment="Center"
                     FontSize="15"
+                    VerticalOptions="End"
                     TextColor="Black"
                     Grid.Row="2"/>
         </Grid>  
@@ -254,7 +256,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>         
         
@@ -285,8 +287,8 @@
         </Grid>  
         </Frame>
         <Frame  CornerRadius="30"   
-                BorderColor="Transparent"
-                BackgroundColor="#99FFFFFF"
+                BorderColor="Black"
+                BackgroundColor="#55ffffff"
                 HeightRequest="200"
                 VerticalOptions="End"
                 Grid.Row="3"
@@ -299,8 +301,8 @@
 
         <CollectionView.ItemTemplate>
         <DataTemplate>
-         <Frame BackgroundColor="#FFF"
-                BorderColor="#FFF"
+         <Frame BackgroundColor="#77ffffff"
+                BorderColor="Black"
                 WidthRequest="200"      
                 CornerRadius="20">
 
@@ -360,8 +362,9 @@
                         Grid.Row="3"
                         Grid.Column="1"/>
 
-                <Image  Source="{Binding condition}"
+                <Image  Source="{Binding condition, StringFormat='{0}.png'}"
                         Aspect="Fill"
+                   
                         HeightRequest="50"
                         WidthRequest="50"
                         Grid.ColumnSpan="2"
